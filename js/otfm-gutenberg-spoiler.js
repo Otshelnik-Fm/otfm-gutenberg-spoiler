@@ -26,11 +26,11 @@
 			},
 			alignment: {
 				type: 'string',
-				default: 'center'
+				default: 'left'
 			},
 			spColor: {
 				type: 'string',
-				default: '#cccccc'
+				default: '#f5f5f5'
 			}
 		},
                 keywords: [ // search sinonime
@@ -55,6 +55,44 @@
                         }
 
 			return [
+				el( InspectorControls, { key: 'inspector' }, // Display the block options in the inspector panel.
+					el( components.PanelBody, {
+						title: i18n.__( 'Spoiler color' ),
+						className: 'otfm_spoiler_color',
+						initialOpen: true
+					},
+						el( 'p', {}, i18n.__( 'Choose the color of the spoiler header:' ) ),
+						el( ColorPalette, {
+                                                        label: i18n.__( 'Spoiler color' ),
+                                                        colors: [
+                                                            {color:"#f5f5f5",name:"1"},
+                                                            {color:"#e5e5e5",name:"2"},
+                                                            {color:"#ffeead",name:"3"},
+                                                            {color:"#e8d98a",name:"4"},
+                                                            {color:"#feb236",name:"5"},
+                                                            {color:"#f9ccac",name:"6"},
+                                                            {color:"#f2ae72",name:"7"},
+                                                            {color:"#ffcfcf",name:"8"},
+                                                            {color:"#eca1a6",name:"9"},
+                                                            {color:"#e3eaa7",name:"10"},
+                                                            {color:"#b5e7a0",name:"11"},
+                                                            {color:"#bdcebe",name:"12"},
+                                                            {color:"#d6cbd3",name:"13"},
+                                                            {color:"#e6e2d3",name:"14"},
+                                                            {color:"#dac292",name:"15"},
+                                                            {color:"#d5e1df",name:"16"},
+                                                            {color:"#b7d7e8",name:"17"},
+                                                            {color:"#9fd5f0",name:"18"},
+                                                            {color:"#ffffff",name:"19"}
+                                                        ],
+							value: attributes.spColor,
+							onChange: function( sColor ) {
+								props.setAttributes( { spColor: sColor } );
+							}
+						} )
+					)
+                                    ),
+
                                 el(
                                     BlockControls,
                                     { key: 'controls' },
@@ -68,13 +106,21 @@
                                 ),
 				el( 'div', { className: props.className },
 					el( 'div', {
-						className: 'otfm_spoiler_wrapper', style: { textAlign: alignment } },
+                                                    className: 'otfm_spoiler_wrapper', 
+                                                    style: {
+                                                        textAlign: alignment,
+                                                        border: '1px solid #e5e5e5'
+                                                    } 
+                                                },
 
 						el( RichText, {
                                                         key: 'editable',
                                                         tagName: 'div',
                                                         className: 'otfm_spoiler_title',
-                                                        style: { backgroundColor: spColor },
+                                                        style: {
+                                                            backgroundColor: spColor,
+                                                            padding: '5px 10px'
+                                                        },
                                                         value: attributes.title,
                                                         placeholder: 'Spoiler title',
                                                         keepPlaceholderOnFocus: true,
@@ -89,53 +135,15 @@
 							placeholder: i18n.__( 'Spoiler content' ),
 							keepPlaceholderOnFocus: true,
 							value: attributes.subtitle,
+                                                        style: {
+                                                            padding: '5px 10px'
+                                                        },
 							//isSelected: false,
 							onChange: function( newSubtitle ) {
 								props.setAttributes( { subtitle: newSubtitle } );
 							}
 						} )
-					),
-				el( InspectorControls, { key: 'inspector' }, // Display the block options in the inspector panel.
-					el( components.PanelBody, {
-						title: i18n.__( 'Spoiler color' ),
-						className: 'otfm_spoiler_color',
-						initialOpen: true
-					},
-						el( 'p', {}, i18n.__( 'Choose the color of the spoiler header:' ) ),
-						el( ColorPalette, {
-                                                        label: i18n.__( 'Spoiler color' ),
-                                                        colors: [
-                                                            {color:"#feb236",name:"royal blue"},
-                                                            {color:"#eca1a6",name:"sky blue"},
-                                                            {color:"#d5e1df",name:"yellow"},
-                                                            {color:"#e3eaa7",name:"pink"},
-                                                            {color:"#b5e7a0",name:"purple"},
-                                                            {color:"#d6cbd3",name:"yellow"},
-                                                            {color:"#bdcebe",name:"pink"},
-                                                            {color:"#dac292",name:"yellow"},
-                                                            {color:"#e6e2d3",name:"pink"},
-                                                            {color:"#deeaee",name:"yellow"},
-                                                            {color:"#eea29a",name:"purple"},
-                                                            {color:"#d5f4e6",name:"yellow"},
-                                                            {color:"#f4e1d2",name:"purple"},
-                                                            {color:"#cfe0e8",name:"yellow"},
-                                                            {color:"#b7d7e8",name:"pink"},
-                                                            {color:"#87bdd8",name:"purple"},
-                                                            {color:"#daebe8",name:"purple"},
-                                                            {color:"#f9ccac",name:"purple"},
-                                                            {color:"#f9d5e5",name:"purple"},
-                                                            {color:"#eeac99",name:"purple"},
-                                                            {color:"#ffeead",name:"purple"},
-                                                            {color:"#f2e394",name:"purple"},
-                                                            {color:"#f2ae72",name:"purple"},
-                                                        ],
-							value: attributes.spColor,
-							onChange: function( sColor ) {
-								props.setAttributes( { spColor: sColor } );
-							}
-						} )
 					)
-                                    )
                                     
 				)
 			];
@@ -152,17 +160,26 @@
 				},
 					el( 'div', {
 						className: 'otfm_spoiler_wrapper',
-						style: { textAlign: attributes.alignment }
+                                                style: {
+                                                    textAlign: alignment,
+                                                    border: '1px solid #e5e5e5'
+                                                } 
 					},
 						el( RichText.Content, {
 							tagName: 'div',
                                                         className: 'otfm_spoiler_title',
-                                                        style: { backgroundColor: spColor },
+                                                        style: {
+                                                            backgroundColor: spColor,
+                                                            padding: '5px 10px'
+                                                        },
 							value: attributes.title
 						} ),
 						el( RichText.Content, {
 							tagName: 'div',
                                                         className: 'otfm_spoiler_content',
+                                                        style: {
+                                                            padding: '5px 10px'
+                                                        },
 							value: attributes.subtitle
 						} )
 					)
