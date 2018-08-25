@@ -22,7 +22,7 @@ function ogs_script(){
             array( 'wp-blocks', 'wp-i18n', 'wp-element' )
     );
 
-    register_block_type( 'otfm/spoiler', array(
+    register_block_type( 'otfm/little-spoiler', array(
         'editor_script' => 'ogs_script',
     ) );
 }

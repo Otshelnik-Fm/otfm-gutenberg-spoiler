@@ -36,7 +36,7 @@
     -webkit-transition: opacity 0.5s ease;
             transition: opacity 0.5s ease;
 }
-.otfm_spoiler_content.otfm_spoiler_open {
+.otfm_spoiler_open .otfm_spoiler_content {
     height: auto !important;
     opacity: 1 !important;
     padding: 5px 10px;
@@ -44,7 +44,7 @@
 }
 
 
-.otfm_spoiler_title.otfm_title_spoiler_open::after {
+.otfm_spoiler_open .otfm_spoiler_title::after {
     opacity: 0;
     -webkit-transform: translate(-50%, -50%) rotate(90deg);
             transform: translate(-50%, -50%) rotate(90deg);
@@ -67,7 +67,7 @@
             transition: all 0.2s cubic-bezier(0.42,0,0.58,1);
     width: 14px;
 }
-.otfm_spoiler_title.otfm_title_spoiler_open::before {
+.otfm_spoiler_open .otfm_spoiler_title::before {
     -webkit-transform: translate(-50%, -50%) rotate(0deg);
             transform: translate(-50%, -50%) rotate(0deg);
 }
