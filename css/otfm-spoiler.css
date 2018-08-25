@@ -1,0 +1,81 @@
+.otfm_spoiler_wrapper {border: 1px solid #e5e5e5;}
+.otfm_spoiler_f5f5f5 {border-color: #e5e5e5;}
+.otfm_spoiler_e5e5e5 {border-color: #d5d5d5;}
+.otfm_spoiler_ffeead {border-color: #ebda99;}
+.otfm_spoiler_e8d98a {border-color: #cfc071;}
+.otfm_spoiler_feb236 {border-color: #e09418;}
+.otfm_spoiler_f9ccac {border-color: #e0b393;}
+.otfm_spoiler_f2ae72 {border-color: #d49054;}
+.otfm_spoiler_ffcfcf {border-color: #e5b5b5;}
+.otfm_spoiler_eca1a6 {border-color: #ce8388;}
+.otfm_spoiler_e3eaa7 {border-color: #cad18e;}
+.otfm_spoiler_b5e7a0 {border-color: #97c982;}
+.otfm_spoiler_bdcebe {border-color: #9fb0a0;}
+.otfm_spoiler_d6cbd3 {border-color: #b8adb5;}
+.otfm_spoiler_e6e2d3 {border-color: #cdc9ba;}
+.otfm_spoiler_dac292 {border-color: #c1a979;}
+.otfm_spoiler_d5e1df {border-color: #bcc8c6;}
+.otfm_spoiler_b7d7e8 {border-color: #99b9ca;}
+.otfm_spoiler_9fd5f0 {border-color: #81b7d2;}
+.otfm_spoiler_ffffff {border-color: #e5e5e5;}
+
+
+
+.otfm_spoiler_title {
+	cursor: pointer;
+        position: relative;
+        padding: 5px 10px 5px 30px;
+}
+.otfm_spoiler_title:hover {
+	filter: brightness(0.97);
+}
+
+.otfm_spoiler_content {
+	transition: opacity 0.5s ease;
+	opacity: 0;
+	overflow: hidden;
+}
+.otfm_spoiler_content.otfm_spoiler_open {
+	padding: 5px 10px;
+	height: auto !important;
+	opacity: 1 !important;
+        visibility: visible !important;
+}
+
+
+
+.otfm_spoiler_title.otfm_title_spoiler_open::after {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+            transform: translate(-50%, -50%) rotate(90deg);
+}
+.otfm_spoiler_title::after {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.otfm_spoiler_title::after,
+.otfm_spoiler_title::before {
+    background-color: #777;
+    content: " ";
+    display: block;
+    height: 2px;
+    left: 16px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.2s cubic-bezier(0.42,0,0.58,1);
+            transition: all 0.2s cubic-bezier(0.42,0,0.58,1);
+    width: 14px;
+}
+.otfm_spoiler_title.otfm_title_spoiler_open::before {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+}
+.otfm_spoiler_title::before {
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
+}
+.otfm_spoiler_title:hover::after,
+.otfm_spoiler_title:hover::before {
+    background-color: #000;
+}

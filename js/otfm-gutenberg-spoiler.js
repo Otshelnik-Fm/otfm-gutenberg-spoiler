@@ -87,7 +87,7 @@
                                                         ],
 							value: attributes.spColor,
 							onChange: function( sColor ) {
-								props.setAttributes( { spColor: sColor } );
+                                                            props.setAttributes( { spColor: sColor } );
 							}
 						} )
 					)
@@ -109,8 +109,8 @@
                                                     className: 'otfm_spoiler_wrapper', 
                                                     style: {
                                                         textAlign: alignment,
-                                                        border: '1px solid #e5e5e5'
-                                                    } 
+                                                        border: '1px solid ' + spColor
+                                                    }
                                                 },
 
 						el( RichText, {
@@ -159,18 +159,16 @@
 					className: props.className
 				},
 					el( 'div', {
-						className: 'otfm_spoiler_wrapper',
+						className: 'otfm_spoiler_wrapper otfm_spoiler_' + spColor.slice(1),
                                                 style: {
-                                                    textAlign: alignment,
-                                                    border: '1px solid #e5e5e5'
+                                                    textAlign: alignment
                                                 } 
 					},
 						el( RichText.Content, {
 							tagName: 'div',
                                                         className: 'otfm_spoiler_title',
                                                         style: {
-                                                            backgroundColor: spColor,
-                                                            padding: '5px 10px'
+                                                            backgroundColor: spColor
                                                         },
 							value: attributes.title
 						} ),
@@ -178,7 +176,9 @@
 							tagName: 'div',
                                                         className: 'otfm_spoiler_content',
                                                         style: {
-                                                            padding: '5px 10px'
+                                                            height: 0,
+                                                            opacity: 0,
+                                                            visibility: 'hidden'
                                                         },
 							value: attributes.subtitle
 						} )
