@@ -29,7 +29,7 @@ function ogs_script(){
 add_action('init', 'ogs_script');
 
 
-
+// add script on frontend
 function ogs_spoiler_script(){
     wp_enqueue_script(
             'otfm-guten-spoiler-js',
@@ -38,11 +38,16 @@ function ogs_spoiler_script(){
             '',
             true
     );
+}
+add_action( 'wp_enqueue_scripts', 'ogs_spoiler_script' );
+
+
+// add style on frontend
+function ogs_spoiler_style(){
     wp_enqueue_style(
             'otfm-guten-spoiler-css',
             plugins_url('css/otfm-spoiler.css', __FILE__)
     );
 }
-add_action( 'wp_enqueue_scripts', 'ogs_spoiler_script' );
-
+add_action( 'wp_enqueue_scripts', 'ogs_spoiler_style' );
 
