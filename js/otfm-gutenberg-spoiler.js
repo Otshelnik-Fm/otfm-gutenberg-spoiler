@@ -1,11 +1,11 @@
-( function( blocks, components, i18n, element ) {
-    var el = element.createElement;
-    var RichText = wp.editor.RichText;
-    var BlockControls = wp.editor.BlockControls;
-    var AlignmentToolbar = wp.editor.AlignmentToolbar;
-    var InspectorControls = wp.editor.InspectorControls;
-    var ColorPalette = wp.components.ColorPalette;
-        
+( function( editor, components, i18n, element ) {
+    var el = element.createElement,
+        RichText = editor.RichText,
+        BlockControls = editor.BlockControls,
+        AlignmentToolbar = editor.AlignmentToolbar,
+        InspectorControls = editor.InspectorControls,
+        ColorPalette = components.ColorPalette;
+
     // see icons https://material.io/tools/icons/
     // and add svg https://wp.zacgordon.com/2017/12/07/how-to-add-custom-icons-to-gutenberg-editor-blocks-in-wordpress/
     var iconLitSpoiler = el('svg', { width: 24, height: 24 },
@@ -44,9 +44,9 @@
         ],
 
         edit: function( props ) {
-            var attributes = props.attributes;
-            var alignment = props.attributes.alignment;
-            var spColor = props.attributes.spColor;
+            var attributes = props.attributes,
+                alignment = props.attributes.alignment,
+                spColor = props.attributes.spColor;
 
             function onChangeAlignment( newAlignment ) {
                 props.setAttributes( { alignment: newAlignment } );
@@ -99,55 +99,54 @@
                 ),
 
                 el( 'div', { className: props.className },
-                        el( 'div', {
-                                className: 'otfm_spoiler_wrapper', 
-                                style: {
-                                    textAlign: alignment,
-                                    border: '1px solid ' + spColor
-                                }
+                    el( 'div', {
+                            className: 'otfm_spoiler_wrapper', 
+                            style: {
+                                textAlign: alignment,
+                                border: '1px solid ' + spColor
+                            }
+                        },
+
+                        el( RichText, {
+                            key: 'editable',
+                            tagName: 'div',
+                            className: 'otfm_spoiler_title',
+                            style: {
+                                backgroundColor: spColor,
+                                padding: '5px 10px'
                             },
+                            value: attributes.title,
+                            placeholder: 'Spoiler title',
+                            keepPlaceholderOnFocus: true,
+                            onChange: function( newTitle ) {
+                                props.setAttributes( { title: newTitle } );
+                            }
 
-                            el( RichText, {
-                                key: 'editable',
-                                tagName: 'div',
-                                className: 'otfm_spoiler_title',
-                                style: {
-                                    backgroundColor: spColor,
-                                    padding: '5px 10px'
-                                },
-                                value: attributes.title,
-                                placeholder: 'Spoiler title',
-                                keepPlaceholderOnFocus: true,
-                                onChange: function( newTitle ) {
-                                    props.setAttributes( { title: newTitle } );
-                                }
+                        } ),
 
-                            } ),
-
-                            el( RichText, {
-                                tagName: 'div',
-                                className: 'otfm_spoiler_content',
-                                placeholder: i18n.__( 'Spoiler content' ),
-                                keepPlaceholderOnFocus: true,
-                                value: attributes.subtitle,
-                                style: {
-                                    padding: '5px 10px'
-                                },
-                                //isSelected: false,
-                                onChange: function( newSubtitle ) {
-                                    props.setAttributes( { subtitle: newSubtitle } );
-                                }
-                            } )
-                        )
-
+                        el( RichText, {
+                            tagName: 'div',
+                            className: 'otfm_spoiler_content',
+                            placeholder: i18n.__( 'Spoiler content' ),
+                            keepPlaceholderOnFocus: true,
+                            value: attributes.subtitle,
+                            style: {
+                                padding: '5px 10px'
+                            },
+                            //isSelected: false,
+                            onChange: function( newSubtitle ) {
+                                props.setAttributes( { subtitle: newSubtitle } );
+                            }
+                        } )
+                    )
                 )
             ];
         },
 
         save: function( props ) {
-            var attributes = props.attributes;
-            var alignment = props.attributes.alignment;
-            var spColor = props.attributes.spColor;
+            var attributes = props.attributes,
+                alignment = props.attributes.alignment,
+                spColor = props.attributes.spColor;
 
             return (
                 el( 'div', { className: props.className },
@@ -184,7 +183,7 @@
     } );
 
 } )(
-    window.wp.blocks,
+    window.wp.editor,
     window.wp.components,
     window.wp.i18n,
     window.wp.element
