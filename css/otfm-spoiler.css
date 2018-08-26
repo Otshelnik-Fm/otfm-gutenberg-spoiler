@@ -24,6 +24,7 @@
 
 .otfm_spoiler_title {
     cursor: pointer;
+    min-height: 20px;
     padding: 5px 10px 5px 30px;
     position: relative;
 }
