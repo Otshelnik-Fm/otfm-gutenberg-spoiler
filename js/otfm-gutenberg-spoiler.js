@@ -1,11 +1,9 @@
-( function( editor, components, i18n, element ) {
+( function( blocks, components, i18n, element ) {
     var el = element.createElement;
-    var registerBlockType = wp.blocks.registerBlockType;
     var RichText = wp.editor.RichText;
     var BlockControls = wp.editor.BlockControls;
     var AlignmentToolbar = wp.editor.AlignmentToolbar;
     var InspectorControls = wp.editor.InspectorControls;
-    var TextControl = wp.components.TextControl;
     var ColorPalette = wp.components.ColorPalette;
         
     // see icons https://material.io/tools/icons/
@@ -14,12 +12,12 @@
         el('path', { d: "M3 17h18v2H3zm0-7h18v5H3zm0-4h18v2H3z" } )
     );
 
-	registerBlockType( 'otfm/little-spoiler', { // The name of our block. Must be a string with prefix. Example: my-plugin/my-custom-block.
-		title: i18n.__( 'Little Spoiler' ), // The title of our block.
-		description: i18n.__( 'A custom block for displaying little spoiler.' ), // The description of our block.
-		icon: iconLitSpoiler,
-		category: 'common', // The category of the block.
-		attributes: { // Necessary for saving block content.
+	wp.blocks.registerBlockType( 'otfm/little-spoiler', {
+		title: i18n.__( 'Little Spoiler' ),
+		description: i18n.__( 'A custom block for displaying little spoiler.' ),
+		icon: iconLitSpoiler,   // add svg icon
+		category: 'common',     // The category of the block.
+		attributes: {           // Necessary for saving block content.
 			title: {
 				type: 'array',
 				source: 'children',
@@ -55,10 +53,6 @@
 			function onChangeAlignment( newAlignment ) {
 				props.setAttributes( { alignment: newAlignment } );
 			}
-                        
-                        function onChangeContent( newContent ) {
-                            props.setAttributes( { content: newContent } );
-                        }
 
 			return [
 				el( InspectorControls, { key: 'inspector' }, // Display the block options in the inspector panel.
@@ -195,7 +189,7 @@
 	} );
 
 } )(
-	window.wp.editor,
+	window.wp.blocks,
 	window.wp.components,
 	window.wp.i18n,
 	window.wp.element
