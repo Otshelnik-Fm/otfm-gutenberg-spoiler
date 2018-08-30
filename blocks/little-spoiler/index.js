@@ -114,12 +114,8 @@
                             key: 'editable',
                             tagName: 'div',
                             className: 'otfm_spoiler_title',
-                            style: {
-                                backgroundColor: spColor,
-                                padding: '5px 10px'
-                            },
                             value: attributes.title,
-                            placeholder: 'Spoiler title',
+                            placeholder: i18n.__( 'Spoiler title' ),
                             keepPlaceholderOnFocus: true,
                             onChange: function( newTitle ) {
                                 props.setAttributes( { title: newTitle } );
@@ -133,10 +129,6 @@
                             placeholder: i18n.__( 'Spoiler content' ),
                             keepPlaceholderOnFocus: true,
                             value: attributes.subtitle,
-                            style: {
-                                padding: '5px 10px'
-                            },
-                            //isSelected: false,
                             onChange: function( newSubtitle ) {
                                 props.setAttributes( { subtitle: newSubtitle } );
                             }
@@ -163,9 +155,6 @@
                         el( RichText.Content, {
                             tagName: 'div',
                             className: 'otfm_spoiler_title',
-                            style: {
-                                backgroundColor: spColor
-                            },
                             value: attributes.title
                         } ),
                         
