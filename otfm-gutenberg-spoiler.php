@@ -17,13 +17,21 @@ if (!defined('ABSPATH')) exit; // Game over
 // Inspired by the material https://github.com/Invulu/organic-profile-block
 function ogs_script(){
     wp_register_script(
-            'ogs_script',
-            plugins_url('blocks/little-spoiler/index.js', __FILE__),
-            array( 'wp-blocks', 'wp-i18n', 'wp-element' )
+        'ogs_script',
+        plugins_url('blocks/little-spoiler/index.js', __FILE__),
+        array( 'wp-blocks', 'wp-i18n', 'wp-element' )
+    );
+
+    wp_register_style(
+        'ogs_style',
+        plugins_url('blocks/little-spoiler/style.css', __FILE__),
+        array( 'wp-edit-blocks' ),
+        filemtime( plugin_dir_path( __FILE__ ) . 'blocks/little-spoiler/style.css' )
     );
 
     register_block_type( 'otfm/little-spoiler', array(
         'editor_script' => 'ogs_script',
+        'editor_style'  => 'ogs_style', // only admin editor
     ) );
 }
 add_action('init', 'ogs_script');

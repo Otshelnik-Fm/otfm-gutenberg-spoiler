@@ -48,6 +48,10 @@
                 alignment = props.attributes.alignment,
                 spColor = props.attributes.spColor;
 
+            if (typeof spColor === 'undefined') {
+                spColor = '#f5f5f5';
+            }
+
             function onChangeAlignment( newAlignment ) {
                 props.setAttributes( { alignment: newAlignment } );
             }
@@ -100,10 +104,9 @@
 
                 el( 'div', { className: props.className },
                     el( 'div', {
-                            className: 'otfm_spoiler_wrapper', 
+                            className: 'otfm_spoiler_wrapper otfm_spoiler_' + spColor.slice(1),
                             style: {
-                                textAlign: alignment,
-                                border: '1px solid ' + spColor
+                                textAlign: alignment
                             }
                         },
 
