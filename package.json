@@ -1,0 +1,23 @@
+{
+  "name": "otfm-gutenberg-spoiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^4.17.1"
+  },
+  "devDependencies": {
+    "webpack-command": "^0.4.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Otshelnik-Fm@yandex.ru@bitbucket.org/Otshelnik-Fm/otfm-gutenberg-spoiler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Otshelnik-Fm/otfm-gutenberg-spoiler#readme"
+}

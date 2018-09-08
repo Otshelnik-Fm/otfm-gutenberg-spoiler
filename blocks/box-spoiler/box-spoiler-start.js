@@ -1,32 +1,32 @@
+/* 
+ *  BOX spoiler start
+ */
+
 ( function( editor, components, i18n, element ) {
     var el = element.createElement,
         RichText = editor.RichText,
         BlockControls = editor.BlockControls,
         AlignmentToolbar = editor.AlignmentToolbar,
         InspectorControls = editor.InspectorControls,
-        ColorPalette = components.ColorPalette;
+        ColorPalette = components.ColorPalette,
+        __ = i18n.__;
 
     // see icons https://material.io/tools/icons/
     // and add svg https://wp.zacgordon.com/2017/12/07/how-to-add-custom-icons-to-gutenberg-editor-blocks-in-wordpress/
-    var iconLitSpoiler = el('svg', { width: 24, height: 24 },
-                            el('path', { d: "M3 17h18v2H3zm0-7h18v5H3zm0-4h18v2H3z" } )
+    var iconBoxSpoiler = el('svg', { width: 24, height: 24 },
+                            el('path', { d: "M7 21h2v-2H7v2zm0-8h2v-2H7v2zm4 0h2v-2h-2v2zm0 8h2v-2h-2v2zm-8-4h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2v-2H3v2zm0-4h2V7H3v2zm8 8h2v-2h-2v2zm8-8h2V7h-2v2zm0 4h2v-2h-2v2zM3 3v2h18V3H3zm16 14h2v-2h-2v2zm-4 4h2v-2h-2v2zM11 9h2V7h-2v2zm8 12h2v-2h-2v2zm-4-8h2v-2h-2v2z" } )
                         );
 
-    wp.blocks.registerBlockType( 'otfm/little-spoiler', {
-        title: i18n.__( 'Little Spoiler' ),
-        description: i18n.__( 'A custom block for displaying little spoiler.' ),
-        icon: iconLitSpoiler,   // add svg icon
+    wp.blocks.registerBlockType( 'otfm/box-spoiler-start', {
+        title: __( 'Box Spoiler Start', 'ogs-spoiler' ),
+        description: __( 'Opens the block group spoiler.', 'ogs-spoiler' ),
+        icon: iconBoxSpoiler,   // add svg icon
         category: 'common',     // The category of the block.
         attributes: {           // Necessary for saving block content.
             title: {
                 type: 'array',
                 source: 'children',
-                selector: '.otfm_spoiler_title'
-            },
-            subtitle: {
-                type: 'array',
-                source: 'children',
-                selector: '.otfm_spoiler_content'
+                selector: '.otfm-sp__title'
             },
             alignment: {
                 type: 'string',
@@ -38,7 +38,7 @@
             }
         },
         keywords: [ // search sinonime
-            'little spoiler',
+            'box spoiler',
             'hide show toogle accordion accordeon спойлер',
             'otfm'
         ],
@@ -59,13 +59,13 @@
             return [
                 el( InspectorControls, { key: 'inspector' }, // Display the block options in the inspector panel.
                     el( components.PanelBody, {
-                            title: i18n.__( 'Spoiler color' ),
+                            title: __( 'Spoiler color', 'ogs-spoiler' ),
                             className: 'otfm_spoiler_color',
                             initialOpen: true
                         },
-                        el( 'p', {}, i18n.__( 'Choose the color of the spoiler header:' ) ),
+                        el( 'p', {}, __( 'Choose the color of the spoiler header:', 'ogs-spoiler' ) ),
                         el( ColorPalette, {
-                            label: i18n.__( 'Spoiler color' ),
+                            label: __( 'Spoiler color', 'ogs-spoiler' ),
                             colors: [
                                 {color:"#f5f5f5",name:"1"},
                                 {color:"#e5e5e5",name:"2"},
@@ -102,38 +102,27 @@
                     } )
                 ),
 
-                el( 'div', { className: props.className },
-                    el( 'div', {
-                            className: 'otfm_spoiler_wrapper otfm_spoiler_' + spColor.slice(1),
-                            style: {
-                                textAlign: alignment
-                            }
-                        },
+                el( 'div', { 
+                        className: "otfm-sp__wrapper otfm-sp__box js-otfm-sp-box__closed otfm-sp__" + spColor.slice(1),
+                        'data-otfm-spc': spColor,
+                        style: {
+                            textAlign: alignment
+                        }
+                    },
 
-                        el( RichText, {
-                            key: 'editable',
-                            tagName: 'div',
-                            className: 'otfm_spoiler_title',
-                            value: attributes.title,
-                            placeholder: i18n.__( 'Spoiler title' ),
-                            keepPlaceholderOnFocus: true,
-                            onChange: function( newTitle ) {
-                                props.setAttributes( { title: newTitle } );
-                            }
+                    el( RichText, {
+                        key: 'editable',
+                        tagName: 'div',
+                        className: 'otfm-sp__title',
+                        value: attributes.title,
+                        placeholder: __( 'Spoiler title', 'ogs-spoiler' ),
+                        keepPlaceholderOnFocus: true,
+                        onChange: function( newTitle ) {
+                            props.setAttributes( { title: newTitle } );
+                        }
 
-                        } ),
+                    } ),
 
-                        el( RichText, {
-                            tagName: 'div',
-                            className: 'otfm_spoiler_content',
-                            placeholder: i18n.__( 'Spoiler content' ),
-                            keepPlaceholderOnFocus: true,
-                            value: attributes.subtitle,
-                            onChange: function( newSubtitle ) {
-                                props.setAttributes( { subtitle: newSubtitle } );
-                            }
-                        } )
-                    )
                 )
             ];
         },
@@ -144,31 +133,20 @@
                 spColor = props.attributes.spColor;
 
             return (
-                el( 'div', { className: props.className },
-                    el( 'div', {
-                            className: 'otfm_spoiler_wrapper otfm_spoiler_' + spColor.slice(1),
-                            style: {
-                                textAlign: alignment
-                            } 
-                        },
-                        
-                        el( RichText.Content, {
-                            tagName: 'div',
-                            className: 'otfm_spoiler_title',
-                            value: attributes.title
-                        } ),
-                        
-                        el( RichText.Content, {
-                            tagName: 'div',
-                            className: 'otfm_spoiler_content',
-                            style: {
-                                height: 0,
-                                opacity: 0,
-                                visibility: 'hidden'
-                            },
-                            value: attributes.subtitle
-                        } )
-                    )
+                el( 'div', { 
+                        className: "otfm-sp__wrapper otfm-sp__box js-otfm-sp-box__closed otfm-sp__" + spColor.slice(1),
+                        'data-otfm-spc': spColor,
+                        style: {
+                            textAlign: alignment
+                        }
+                    },
+
+                    el( RichText.Content, {
+                        tagName: 'div',
+                        className: 'otfm-sp__title',
+                        value: attributes.title
+                    } ),
+
                 )
             );
         }

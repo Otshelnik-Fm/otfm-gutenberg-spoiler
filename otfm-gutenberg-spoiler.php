@@ -18,21 +18,47 @@ if (!defined('ABSPATH')) exit; // Game over
 function ogs_script(){
     wp_register_script(
         'ogs_script',
-        plugins_url('blocks/little-spoiler/index.js', __FILE__),
+        plugins_url('dist/bundle.js', __FILE__),
         array( 'wp-blocks', 'wp-i18n', 'wp-element' )
     );
 
     wp_register_style(
         'ogs_style',
-        plugins_url('blocks/little-spoiler/style.css', __FILE__),
+        plugins_url('blocks/editor-style.css', __FILE__),
         array( 'wp-edit-blocks' ),
-        filemtime( plugin_dir_path( __FILE__ ) . 'blocks/little-spoiler/style.css' )
+        filemtime( plugin_dir_path( __FILE__ ) . 'blocks/editor-style.css' )
     );
 
-    register_block_type( 'otfm/little-spoiler', array(
-        'editor_script' => 'ogs_script',
-        'editor_style'  => 'ogs_style', // only admin editor
-    ) );
+    if(function_exists('register_block_type')){
+    
+        register_block_type( 'otfm/little-spoiler', array(
+            'editor_script' => 'ogs_script',
+            'editor_style'  => 'ogs_style', // only admin editor
+        ) );
+
+
+        register_block_type( 'otfm/box-spoiler-start', array(
+            'editor_script' => 'ogs_script',
+            'editor_style'  => 'ogs_style',
+        ) );
+
+        register_block_type( 'otfm/box-spoiler-end', array(
+            'editor_script' => 'ogs_script',
+            'editor_style'  => 'ogs_style',
+        ) );
+
+
+        // https://capitainewp.io/formations/wordpress-creer-blocs-gutenberg/i18n-internationaliser-javascript-gutenberg/
+        // languages data
+        $locale  = gutenberg_get_jed_locale_data( 'ogs-spoiler' );
+
+        // add in object JS wp.i18n.setLocaleData.
+        $content = 'wp.i18n.setLocaleData(' . json_encode( $locale ) . ', "ogs-spoiler" );';
+
+        // before script inline
+        wp_script_add_data( 'ogs_script', 'data', $content );
+
+    }
 }
 add_action('init', 'ogs_script');
 
@@ -59,3 +85,39 @@ function ogs_spoiler_style(){
 }
 add_action( 'wp_enqueue_scripts', 'ogs_spoiler_style' );
 
+
+// languages
+function ogs_textdomain() {
+    load_plugin_textdomain( 'ogs-spoiler', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'ogs_textdomain' );
+
+
+
+// critical css before jquery ready event
+function ogs_critical_css(){
+    $styles = '
+        .js-otfm-sp-box__closed ~ :not(.otfm-sp_end),
+        .js-otfm-sp-box__closed ~ .js-otfm-sp-box__closed ~ :not(.otfm-sp_end){
+            left: -9999px;
+            position: absolute;
+            top: -9999px;
+            visibility: hidden;
+        }
+        [class^="wp-block"].otfm-sp_end ~ *,
+        [class^="wp-block"].otfm-sp_end ~ div.otfm-sp_end ~ *{
+            left: auto;
+            position: static;
+            top: auto;
+            visibility: visible;
+        }
+    ';
+
+    // Remove space after colons
+    $clear_in_colons = str_replace(': ', ':', $styles);
+
+    $compress_styles =  preg_replace('/ {2,}/','',str_replace(array("\r\n", "\r", "\n", "\t", '  ', '   ', '    '), '', $clear_in_colons));
+
+    echo "<style>".$compress_styles."</style>\r\n";
+}
+add_action('wp_head', 'ogs_critical_css', 5);

@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: otfm gutenberg spoiler\n"
+"POT-Creation-Date: 2018-08-30 15:42+0400\n"
+"PO-Revision-Date: 2018-08-30 15:43+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: otfm-gutenberg-spoiler\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: i18n.__;__;__e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: blocks/little-spoiler/index.js:16
+msgid "Little Spoiler"
+msgstr "Little Spoiler"
+
+#: blocks/little-spoiler/index.js:17
+msgid "A custom block for displaying little spoiler."
+msgstr "Блок для отображения Little Spoiler."
+
+#: blocks/little-spoiler/index.js:62 blocks/little-spoiler/index.js:68
+msgid "Spoiler color"
+msgstr "Цвет спойлера"
+
+#: blocks/little-spoiler/index.js:66
+msgid "Choose the color of the spoiler header:"
+msgstr "Выберите цвет заголовка спойлера:"
+
+#: blocks/little-spoiler/index.js:118
+msgid "Spoiler title"
+msgstr "Заголовок спойлера"
+
+#: blocks/little-spoiler/index.js:129
+msgid "Spoiler content"
+msgstr "Контент спойлера"

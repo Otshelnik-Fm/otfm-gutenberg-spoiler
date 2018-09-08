@@ -21,17 +21,9 @@
 .otfm-sp__b7d7e8 {border-color: #99b9ca;}
 .otfm-sp__9fd5f0 {border-color: #81b7d2;}
 .otfm-sp__ffffff {border-color: #e5e5e5;}
-
 .otfm-sp__title {
-    cursor: pointer;
-    min-height: 20px;
-    padding: 5px 10px 5px 30px;
-    position: relative;
+    padding: 5px 10px;
 }
-.otfm-sp__title:hover {
-    filter: brightness(0.97);
-}
-
 .otfm-sp__f5f5f5 .otfm-sp__title {background-color: #f5f5f5;}
 .otfm-sp__e5e5e5 .otfm-sp__title {background-color: #e5e5e5;}
 .otfm-sp__ffeead .otfm-sp__title {background-color: #ffeead;}
@@ -51,57 +43,29 @@
 .otfm-sp__b7d7e8 .otfm-sp__title {background-color: #b7d7e8;}
 .otfm-sp__9fd5f0 .otfm-sp__title {background-color: #9fd5f0;}
 .otfm-sp__ffffff .otfm-sp__title {background-color: #ffffff;}
-
 .otfm-sp__content {
-    opacity: 0;
-    overflow: hidden;
-    -webkit-transition: opacity 0.5s ease;
-            transition: opacity 0.5s ease;
-}
-.js-otfm-sp__opened .otfm-sp__content {
-    height: auto !important;
-    opacity: 1 !important;
     padding: 5px 10px;
-    visibility: visible !important;
-}
-.otfm-sp__content > :last-child {
-	margin-bottom: 0;
 }
 
 
-.js-otfm-sp__opened .otfm-sp__title::after {
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-            transform: translate(-50%, -50%) rotate(90deg);
-}
-.otfm-sp__title::after {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-}
-.otfm-sp__title::after,
-.otfm-sp__title::before {
-    background-color: #777;
-    content: " ";
-    display: block;
-    height: 2px;
-    left: 16px;
-    opacity: 1;
+.otfm-sp__box::before {
+    background-color: #faebd7;
+    color: #777;
+    content: "Start Box Spoiler";
+    font-size: 11px;
+    left: 0;
+    margin: 0 0 0 -28px;
+    padding: 0 8px;
     position: absolute;
-    top: 50%;
-    -webkit-transition: all 0.2s cubic-bezier(0.42,0,0.58,1);
-            transition: all 0.2s cubic-bezier(0.42,0,0.58,1);
-    width: 14px;
+    top: -14px;
+    z-index: 7;
 }
-.js-otfm-sp__opened .otfm-sp__title::before {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
+.otfm-sp_end {
+    background-color: #f5f5dc;
+    margin: 0 0 0 -28px;
+    text-align: center;
+    width: calc(100% + 56px);
 }
-.otfm-sp__title::before {
-    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-            transform: translate(-50%, -50%) rotate(-90deg);
+.otfm-sp_end p {
+    color: #777;
 }
-.otfm-sp__title:hover::after,
-.otfm-sp__title:hover::before {
-    background-color: #000;
-}
-
