@@ -32,9 +32,9 @@ function ogs_script(){
 
     wp_register_style(
         'ogs_style',
-        plugins_url('blocks/editor-style.css', __FILE__),
+        plugins_url('dist/editor-style.css', __FILE__),
         array( 'wp-edit-blocks' ),
-        filemtime( plugin_dir_path( __FILE__ ) . 'blocks/editor-style.css' )
+        filemtime( plugin_dir_path( __FILE__ ) . 'dist/editor-style.css' )
     );
 
     if(function_exists('register_block_type')){
