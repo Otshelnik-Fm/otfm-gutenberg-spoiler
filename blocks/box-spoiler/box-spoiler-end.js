@@ -14,7 +14,7 @@
 
     wp.blocks.registerBlockType( 'otfm/box-spoiler-end', {
         title: __( 'Box Spoiler End', 'ogs-spoiler' ),
-        description: __( 'Closes the block group spoiler.', 'ogs-spoiler' ),
+        description: __( 'Closes the Box Spoiler.', 'ogs-spoiler' ),
         icon: iconBoxSpoiler,   // add svg icon
         category: 'common',     // The category of the block.
         keywords: [ // search sinonime

@@ -19,7 +19,7 @@
 
     wp.blocks.registerBlockType( 'otfm/box-spoiler-start', {
         title: __( 'Box Spoiler Start', 'ogs-spoiler' ),
-        description: __( 'Opens the block group spoiler.', 'ogs-spoiler' ),
+        description: __( 'Opens the Box Spoiler (and you need to close the spoiler by selecting the "Box Spoiler End" block).', 'ogs-spoiler' ),
         icon: iconBoxSpoiler,   // add svg icon
         category: 'common',     // The category of the block.
         attributes: {           // Necessary for saving block content.
@@ -84,13 +84,13 @@
                                 {color:"#dac292",name:"15"},
                                 {color:"#d5e1df",name:"16"},
                                 {color:"#b7d7e8",name:"17"},
-                                {color:"#9fd5f0",name:"18"},
-                                {color:"#ffffff",name:"19"}
+                                {color:"#9fd5f0",name:"18"}
                             ],
                             value: attributes.spColor,
                             onChange: function( sColor ) {
                                 props.setAttributes( { spColor: sColor } );
-                            }
+                            },
+                            disableCustomColors: true
                         } )
                     )
                 ),

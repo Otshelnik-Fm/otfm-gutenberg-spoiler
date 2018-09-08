@@ -6,8 +6,16 @@ Description:    Gutenberg Spoiler for WordPress
 Version:        1.0
 Author:         Otshelnik-Fm (Wladimir Druzhaev)
 Author URI:     https://otshelnik-fm.ru/
-Text Domain:    otns-spoiler
+Text Domain:    ogs-spoiler
 Domain Path:    /languages
+*/
+
+/*
+
+╔═╗╔╦╗╔═╗╔╦╗
+║ ║ ║ ╠╣ ║║║ https://otshelnik-fm.ru
+╚═╝ ╩ ╚  ╩ ╩
+
 */
 
 
@@ -30,7 +38,7 @@ function ogs_script(){
     );
 
     if(function_exists('register_block_type')){
-    
+
         register_block_type( 'otfm/little-spoiler', array(
             'editor_script' => 'ogs_script',
             'editor_style'  => 'ogs_style', // only admin editor

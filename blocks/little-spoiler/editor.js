@@ -89,13 +89,13 @@
                                 {color:"#dac292",name:"15"},
                                 {color:"#d5e1df",name:"16"},
                                 {color:"#b7d7e8",name:"17"},
-                                {color:"#9fd5f0",name:"18"},
-                                {color:"#ffffff",name:"19"}
+                                {color:"#9fd5f0",name:"18"}
                             ],
                             value: attributes.spColor,
                             onChange: function( sColor ) {
                                 props.setAttributes( { spColor: sColor } );
-                            }
+                            },
+                            disableCustomColors: true // colorpicker off
                         } )
                     )
                 ),

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: otfm gutenberg spoiler\n"
-"POT-Creation-Date: 2018-08-30 15:42+0400\n"
-"PO-Revision-Date: 2018-08-30 15:43+0400\n"
+"POT-Creation-Date: 2018-09-08 20:41+0400\n"
+"PO-Revision-Date: 2018-09-08 20:43+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -16,26 +16,57 @@ msgstr ""
 "X-Poedit-KeywordsList: i18n.__;__;__e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: blocks/little-spoiler/index.js:16
-msgid "Little Spoiler"
-msgstr "Little Spoiler"
+#: blocks/box-spoiler/box-spoiler-end.js:16
+msgid "Box Spoiler End"
+msgstr "Box Spoiler End"
 
-#: blocks/little-spoiler/index.js:17
-msgid "A custom block for displaying little spoiler."
-msgstr "Блок для отображения Little Spoiler."
+#: blocks/box-spoiler/box-spoiler-end.js:17
+msgid "Closes the Box Spoiler."
+msgstr "Закрывает Box Spoiler."
 
-#: blocks/little-spoiler/index.js:62 blocks/little-spoiler/index.js:68
+#: blocks/box-spoiler/box-spoiler-end.js:29
+msgid "End Spoiler"
+msgstr "End Spoiler"
+
+#: blocks/box-spoiler/box-spoiler-start.js:21
+msgid "Box Spoiler Start"
+msgstr "Box Spoiler Start"
+
+#: blocks/box-spoiler/box-spoiler-start.js:22
+msgid ""
+"Opens the Box Spoiler (and you need to close the spoiler by selecting the "
+"\"Box Spoiler End\" block)."
+msgstr ""
+"Открывает Box Spoiler (и необходимо закрыть спойлер, выбрав блок \"Box "
+"Spoiler End\")."
+
+#: blocks/box-spoiler/box-spoiler-start.js:62
+#: blocks/box-spoiler/box-spoiler-start.js:68
+#: blocks/little-spoiler/editor.js:67 blocks/little-spoiler/editor.js:73
 msgid "Spoiler color"
 msgstr "Цвет спойлера"
 
-#: blocks/little-spoiler/index.js:66
+#: blocks/box-spoiler/box-spoiler-start.js:66
+#: blocks/little-spoiler/editor.js:71
 msgid "Choose the color of the spoiler header:"
 msgstr "Выберите цвет заголовка спойлера:"
 
-#: blocks/little-spoiler/index.js:118
+#: blocks/box-spoiler/box-spoiler-start.js:118
+#: blocks/little-spoiler/editor.js:124
 msgid "Spoiler title"
 msgstr "Заголовок спойлера"
 
-#: blocks/little-spoiler/index.js:129
+#: blocks/little-spoiler/editor.js:21
+msgid "Little Spoiler"
+msgstr "Little Spoiler"
+
+#: blocks/little-spoiler/editor.js:22
+msgid "A custom block for displaying little spoiler."
+msgstr "Блок для отображения Little Spoiler."
+
+#: blocks/little-spoiler/editor.js:135
 msgid "Spoiler content"
 msgstr "Контент спойлера"
+
+#~ msgid "Opens the block group spoiler."
+#~ msgstr "Открывает спойлер."
