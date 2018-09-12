@@ -7,7 +7,7 @@ Tags: gutenberg, spoiler, accordion, toogle, gutenberg blocks
 Requires at least: 4.9.0
 Tested up to: 4.9.8
 Requires PHP: 5.6.36
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
