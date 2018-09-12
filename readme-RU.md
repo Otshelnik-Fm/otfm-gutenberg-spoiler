@@ -53,7 +53,12 @@ PHP 5.6+, 7, 7.1 или 7.2 рекомендованы, WordPress версии �
 
 ## Changelog  
 
-**2018-09-12** 
+**2018-09-12**  
+v1.0.2  
+* add php file only for service translate.wordpress.org  
+
+
+**2018-09-12**  
 v1.0.1    
 * Small css fix
 
@@ -65,4 +70,4 @@ v1.0.0
 
 ## Author
 
-**Wladimir Druzhaev** (Otshelnik-Fm)
+**Wladimir Druzhaev** [(Otshelnik-Fm)](https://otshelnik-fm.ru/)

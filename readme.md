@@ -54,9 +54,14 @@ Write me: Otshelnik-Fm@yandex.ru
 
 ## Changelog  
 
-**2018-09-12** 
-v1.0.1    
-* Small css fix
+**2018-09-12**  
+v1.0.2  
+* add php file only for service translate.wordpress.org  
+
+
+**2018-09-12**  
+v1.0.1  
+* Small css fix  
 
 
 **2018-09-08**  
@@ -66,4 +71,4 @@ v1.0.0
 
 ## Author
 
-**Wladimir Druzhaev** (Otshelnik-Fm)
+**Wladimir Druzhaev** [(Otshelnik-Fm)](https://otshelnik-fm.ru/)
