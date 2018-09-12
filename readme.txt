@@ -1,7 +1,8 @@
 === OtFm Gutenberg Spoiler ===
 Author URI: https://otshelnik-fm.ru
 Plugin URI: https://otshelnik-fm.ru
-Contributors: Otshelnik-Fm
+Donate link: https://money.yandex.ru/to/41001526199072
+Contributors: otshelnik-fm
 Tags: gutenberg, spoiler, accordion, toogle, gutenberg blocks
 Requires at least: 4.9.0
 Tested up to: 4.9.8
@@ -29,6 +30,8 @@ Between them, you insert any Gutenberg block (or several Gutenberg block's) with
 In the frontend, the spoiler (accordion) opens with animation.
 In the editor you can choose the color design of the spoiler.
 
+Check out all beauty and power of the plugin by watching this video:
+[youtube https://www.youtube.com/watch?v=IrC1yVttMho]
 
 == Installation ==
 
@@ -71,3 +74,18 @@ v1.0.1
 v1.0.0    
 * Release
 
+
+
+== Upgrade Notice ==
+
+Update through the automatic WordPress updater
+
+
+
+== Screenshots ==
+
+1. Find & add spoiler blocks
+2. Little spoiler
+3. Box spoiler
+4. In frontend
+5. Open spoiler
