@@ -12,6 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 The plugin provides in the editor Gutenberg 2 types of spoilers
 
+
 == Description ==
 
 The plugin provides in the editor Gutenberg 2 types of spoilers:
@@ -23,7 +24,7 @@ Little Spoiler - small spoiler for plain text.
 
 Box spoiler - consists of 2 blocks:
 Opening spoiler (Box Spoiler Start) and closing spoiler (Box Spoiler End)
-Between them, you insert Gutenberg blocks with content that you want to hide.
+Between them, you insert any Gutenberg block (or several Gutenberg block's) with content that you want to hide.
 
 In the frontend, the spoiler (accordion) opens with animation.
 In the editor you can choose the color design of the spoiler.
@@ -35,6 +36,12 @@ In the editor you can choose the color design of the spoiler.
 2. Install and activate the Gutenberg WordPress plugin.
 3. Activate the OtFm Gutenberg Spoiler WordPress plugin through the 'Plugins' menu in WordPress.
 4. Use OtFm Gutenberg Spoiler blocks on your next page or post.
+
+
+== Requirements ==
+
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v3.7.0
+
 
 == Frequently Asked Questions ==
 
@@ -52,7 +59,13 @@ Yes! OtFm Gutenberg Spoiler core features are absolutely free.
 = Where can I ask for help? =
 Write me Otshelnik-Fm@yandex.ru
 
+
 == Changelog ==
+
+= 2018-09-12 =
+v1.0.1    
+* Small css fix
+
 
 = 2018-09-08 =
 v1.0.0    

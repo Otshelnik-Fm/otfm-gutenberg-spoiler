@@ -63,7 +63,8 @@
     visibility: visible !important;
 }
 .otfm-sp__content > :last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 
@@ -102,4 +103,3 @@
 .otfm-sp__title:hover::before {
     background-color: #000;
 }
-
