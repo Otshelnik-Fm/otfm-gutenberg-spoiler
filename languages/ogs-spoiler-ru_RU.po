@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: otfm gutenberg spoiler\n"
-"POT-Creation-Date: 2018-09-08 20:41+0400\n"
-"PO-Revision-Date: 2018-09-08 20:43+0400\n"
+"POT-Creation-Date: 2018-09-20 01:46+0400\n"
+"PO-Revision-Date: 2018-09-20 01:46+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -16,23 +16,11 @@ msgstr ""
 "X-Poedit-KeywordsList: i18n.__;__;__e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: blocks/box-spoiler/box-spoiler-end.js:16
-msgid "Box Spoiler End"
-msgstr "Box Spoiler End"
-
-#: blocks/box-spoiler/box-spoiler-end.js:17
+#: blocks/box-spoiler/box-spoiler-end.js:17 languages/ogs-translations.php:10
 msgid "Closes the Box Spoiler."
 msgstr "Закрывает Box Spoiler."
 
-#: blocks/box-spoiler/box-spoiler-end.js:29
-msgid "End Spoiler"
-msgstr "End Spoiler"
-
-#: blocks/box-spoiler/box-spoiler-start.js:21
-msgid "Box Spoiler Start"
-msgstr "Box Spoiler Start"
-
-#: blocks/box-spoiler/box-spoiler-start.js:22
+#: blocks/box-spoiler/box-spoiler-start.js:22 languages/ogs-translations.php:14
 msgid ""
 "Opens the Box Spoiler (and you need to close the spoiler by selecting the "
 "\"Box Spoiler End\" block)."
@@ -43,30 +31,39 @@ msgstr ""
 #: blocks/box-spoiler/box-spoiler-start.js:62
 #: blocks/box-spoiler/box-spoiler-start.js:68
 #: blocks/little-spoiler/editor.js:67 blocks/little-spoiler/editor.js:73
+#: languages/ogs-translations.php:17
 msgid "Spoiler color"
 msgstr "Цвет спойлера"
 
 #: blocks/box-spoiler/box-spoiler-start.js:66
-#: blocks/little-spoiler/editor.js:71
+#: blocks/little-spoiler/editor.js:71 languages/ogs-translations.php:20
 msgid "Choose the color of the spoiler header:"
 msgstr "Выберите цвет заголовка спойлера:"
 
 #: blocks/box-spoiler/box-spoiler-start.js:118
-#: blocks/little-spoiler/editor.js:124
+#: blocks/little-spoiler/editor.js:124 languages/ogs-translations.php:23
 msgid "Spoiler title"
 msgstr "Заголовок спойлера"
 
-#: blocks/little-spoiler/editor.js:21
-msgid "Little Spoiler"
-msgstr "Little Spoiler"
-
-#: blocks/little-spoiler/editor.js:22
+#: blocks/little-spoiler/editor.js:22 languages/ogs-translations.php:27
 msgid "A custom block for displaying little spoiler."
 msgstr "Блок для отображения Little Spoiler."
 
-#: blocks/little-spoiler/editor.js:135
+#: blocks/little-spoiler/editor.js:135 languages/ogs-translations.php:30
 msgid "Spoiler content"
 msgstr "Контент спойлера"
+
+#~ msgid "Box Spoiler End"
+#~ msgstr "Box Spoiler End"
+
+#~ msgid "End Spoiler"
+#~ msgstr "End Spoiler"
+
+#~ msgid "Box Spoiler Start"
+#~ msgstr "Box Spoiler Start"
+
+#~ msgid "Little Spoiler"
+#~ msgstr "Little Spoiler"
 
 #~ msgid "Opens the block group spoiler."
 #~ msgstr "Открывает спойлер."
