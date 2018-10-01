@@ -1,3 +1,6 @@
+[![WP compatibility](https://plugintests.com/plugins/otfm-gutenberg-spoiler/wp-badge.svg)](https://plugintests.com/plugins/otfm-gutenberg-spoiler/latest)
+[![PHP compatibility](https://plugintests.com/plugins/otfm-gutenberg-spoiler/php-badge.svg)](https://plugintests.com/plugins/otfm-gutenberg-spoiler/latest)
+
 ## Description  
 
 The plugin provides in the editor Gutenberg 2 types of spoilers:  
