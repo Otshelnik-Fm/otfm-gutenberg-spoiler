@@ -57,6 +57,7 @@
             transition: opacity 0.5s ease;
 }
 .js-otfm-sp__opened .otfm-sp__content {
+    box-sizing: content-box;
     height: auto !important;
     opacity: 1 !important;
     padding: 5px 10px;

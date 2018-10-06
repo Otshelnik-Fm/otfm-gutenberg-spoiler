@@ -35,7 +35,7 @@ Download in official repository WordPress: [see link](https://wordpress.org/plug
 
 ## Requirements  
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v3.8.0  
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v3.9.0  
 
 
 ## Frequently Asked Questions  
@@ -56,6 +56,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+**2018-10-06**  
+v1.0.4  
+* Compatibility for Gutenberg 3.9.0  
+* Fix content spoiler on apple safari  
+
 
 **2018-09-20**  
 v1.0.3  

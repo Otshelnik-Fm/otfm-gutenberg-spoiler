@@ -7,7 +7,7 @@ Tags: gutenberg, spoiler, accordion, toogle, gutenberg blocks
 Requires at least: 4.9.0
 Tested up to: 4.9.8
 Requires PHP: 5.6.36
-Stable tag: 1.0.2
+Stable tag: 1.0.4
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,7 +43,16 @@ Check out all beauty and power of the plugin by watching this video:
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v3.8.0
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v3.9.0
+
+
+= Translation =
+
+Available in English, Russian, Spanish and more other languages in becoming.
+
+
+= Acknowledgements =
+Thanks to [Nilo Velez](https://profiles.wordpress.org/nilovelez/) for Spanish translation approval.
 
 
 == Frequently Asked Questions ==
@@ -64,6 +73,11 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2018-10-06 =
+v1.0.4  
+* Compatibility for Gutenberg 3.9.0  
+* Fix content spoiler on apple safari
+
 
 = 2018-09-20 =
 v1.0.3  
