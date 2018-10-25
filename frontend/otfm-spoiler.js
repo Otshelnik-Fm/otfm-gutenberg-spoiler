@@ -14,4 +14,6 @@ jQuery(document).ready(function($){
             $(this).addClass('js-otfm-sp__no_closed_tag').next().detach().appendTo(this).wrapAll(spWrapper);
         }
     });
+    
+    $('#ogs_cr_st').remove();
 });

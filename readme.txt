@@ -43,7 +43,7 @@ Check out all beauty and power of the plugin by watching this video:
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.1.0
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.1.1
 
 
 = Translation =
@@ -74,6 +74,12 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2018-10-26 =  
+v1.0.6  
+* fix spoiler bug if isset cover block  
+* Compatibility for Gutenberg v4.1.1  
+
+
 = 2018-10-25 =
 v1.0.5  
 * Compatibility for Gutenberg v4.1.0  

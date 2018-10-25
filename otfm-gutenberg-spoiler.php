@@ -3,7 +3,7 @@
 /*
 Plugin Name:    OtFm Gutenberg Spoiler
 Description:    Gutenberg Spoiler for WordPress
-Version:        1.0.5
+Version:        1.0.6
 Author:         Otshelnik-Fm (Wladimir Druzhaev)
 Author URI:     https://otshelnik-fm.ru/
 Text Domain:    ogs-spoiler
@@ -115,7 +115,7 @@ function ogs_critical_css(){
         [class^="wp-block"].otfm-sp_end ~ *,
         [class^="wp-block"].otfm-sp_end ~ div.otfm-sp_end ~ *{
             left: auto;
-            position: static;
+            position: relative;
             top: auto;
             visibility: visible;
         }
@@ -126,6 +126,6 @@ function ogs_critical_css(){
 
     $compress_styles =  preg_replace('/ {2,}/','',str_replace(array("\r\n", "\r", "\n", "\t", '  ', '   ', '    '), '', $clear_in_colons));
 
-    echo "<style>".$compress_styles."</style>\r\n";
+    echo "<style id='ogs_cr_st'>".$compress_styles."</style>\r\n";
 }
 add_action('wp_head', 'ogs_critical_css', 5);
