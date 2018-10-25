@@ -35,7 +35,17 @@ Download in official repository WordPress: [see link](https://wordpress.org/plug
 
 ## Requirements  
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v3.9.0  
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.1.0  
+
+
+## Translation  
+
+Available in English, Russian, Spanish, Swedish and more other languages in becoming.  
+
+
+## Acknowledgements  
+Thanks to [Nilo Velez](https://profiles.wordpress.org/nilovelez/) for Spanish translation approval.  
+Thanks to [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) for Swedish translation approval.  
 
 
 ## Frequently Asked Questions  
@@ -56,6 +66,12 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+**2018-10-25**  
+v1.0.5  
+* Compatibility for Gutenberg v4.1.0  
+* Small css-fix for admin editor  
+
+
 **2018-10-06**  
 v1.0.4  
 * Compatibility for Gutenberg 3.9.0  
