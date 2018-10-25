@@ -2,8 +2,7 @@
 
 /*
 Plugin Name:    OtFm Gutenberg Spoiler
-Plugin URI:     https://otshelnik-fm.ru/?p=5131
-Description:    Gutenberg Spoiler block's for WordPress
+Description:    Gutenberg Spoiler for WordPress
 Version:        1.0.5
 Author:         Otshelnik-Fm (Wladimir Druzhaev)
 Author URI:     https://otshelnik-fm.ru/
