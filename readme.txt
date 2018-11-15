@@ -7,7 +7,7 @@ Tags: gutenberg, spoiler, accordion, blocks, gutenberg blocks
 Requires at least: 4.9.0
 Tested up to: 4.9.8
 Requires PHP: 5.6.36
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,7 +43,7 @@ Check out all beauty and power of the plugin by watching this video:
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.2.0
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.3.0
 
 
 = Translation =
@@ -74,6 +74,11 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2018-11-15 =  
+v1.0.8  
+* Compatibility for Gutenberg v4.3.0  
+
+
 = 2018-11-08 =  
 v1.0.7  
 * Compatibility for Gutenberg v4.2.0  
