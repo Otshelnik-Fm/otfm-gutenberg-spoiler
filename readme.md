@@ -67,7 +67,7 @@ Write me: Otshelnik-Fm@yandex.ru
 
 ## Changelog  
 = 2018-11-30 =  
-v1.0.10  
+v1.1.0  
 * Compatibility for Gutenberg v4.5.1  
 
 

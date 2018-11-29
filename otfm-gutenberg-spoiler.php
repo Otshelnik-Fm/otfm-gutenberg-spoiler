@@ -3,7 +3,7 @@
 /*
 Plugin Name:    OtFm Gutenberg Spoiler
 Description:    Gutenberg Spoiler for WordPress
-Version:        1.0.10
+Version:        1.1.0
 Author:         Otshelnik-Fm (Wladimir Druzhaev)
 Author URI:     https://otshelnik-fm.ru/
 Text Domain:    ogs-spoiler

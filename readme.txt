@@ -7,7 +7,7 @@ Tags: gutenberg, spoiler, accordion, blocks, gutenberg blocks
 Requires at least: 4.9.0
 Tested up to: 4.9.8
 Requires PHP: 5.6.36
-Stable tag: 1.0.10
+Stable tag: 1.1.0
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -75,7 +75,7 @@ Write me Otshelnik-Fm@yandex.ru
 
 == Changelog ==
 = 2018-11-30 =  
-v1.0.10  
+v1.1.0  
 * Compatibility for Gutenberg v4.5.1  
 
 
