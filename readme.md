@@ -35,7 +35,7 @@ Download in official repository WordPress: [see link](https://wordpress.org/plug
 
 ## Requirements  
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.4.0  
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 4.9+, Gutenberg v4.5.1  
 
 
 ## Translation  
@@ -66,6 +66,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+= 2018-11-30 =  
+v1.0.10  
+* Compatibility for Gutenberg v4.5.1  
+
+
 = 2018-11-17 =  
 v1.0.9  
 * Compatibility for Gutenberg v4.4.0  
