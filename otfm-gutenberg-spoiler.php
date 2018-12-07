@@ -3,7 +3,7 @@
 /*
 Plugin Name:    OtFm Gutenberg Spoiler
 Description:    Gutenberg Spoiler for WordPress
-Version:        1.1.1
+Version:        1.2.0
 Author:         Otshelnik-Fm (Wladimir Druzhaev)
 Author URI:     https://otshelnik-fm.ru/
 Text Domain:    ogs-spoiler
@@ -37,11 +37,11 @@ function ogs_script(){
         filemtime( plugin_dir_path( __FILE__ ) . 'dist/editor-style.css' )
     );
 
-    if(function_exists('register_block_type')){
+    if( !function_exists('register_block_type') ) return;   // if wp 5.0
 
         register_block_type( 'otfm/little-spoiler', array(
             'editor_script' => 'ogs_script',
-            'editor_style'  => 'ogs_style', // only admin editor
+            'editor_style'  => 'ogs_style',                 // only admin editor
         ) );
 
 
@@ -55,20 +55,46 @@ function ogs_script(){
             'editor_style'  => 'ogs_style',
         ) );
 
+// not work for me
+//        if ( function_exists( 'wp_set_script_translations' ) ) {              // wp 5.0
+//            wp_set_script_translations( 'ogs_script', 'ogs-spoiler' );
+//        }
+//        else if ( function_exists( 'gutenberg_get_jed_locale_data' ) ) {      // guten
+            // https://capitainewp.io/formations/wordpress-creer-blocs-gutenberg/i18n-internationaliser-javascript-gutenberg/
+            // languages data
+            //$locale  = gutenberg_get_jed_locale_data( 'ogs-spoiler' );
 
-        // https://capitainewp.io/formations/wordpress-creer-blocs-gutenberg/i18n-internationaliser-javascript-gutenberg/
-        // languages data
-        $locale  = gutenberg_get_jed_locale_data( 'ogs-spoiler' );
+            $locale  = ogs_get_jed_locale_data( 'ogs-spoiler' );
 
-        // add in object JS wp.i18n.setLocaleData.
-        $content = 'wp.i18n.setLocaleData(' . json_encode( $locale ) . ', "ogs-spoiler" );';
+            // add in object JS wp.i18n.setLocaleData.
+            $content = 'wp.i18n.setLocaleData(' . json_encode( $locale ) . ', "ogs-spoiler" );';
 
-        // before script inline
-        wp_script_add_data( 'ogs_script', 'data', $content );
-
-    }
+            // before script inline
+            wp_script_add_data( 'ogs_script', 'data', $content );
+        //}
 }
 add_action('init', 'ogs_script');
+
+
+// in gutenberg original function gutenberg_get_jed_locale_data
+// this is alternative for WP 5.0
+function ogs_get_jed_locale_data( $domain ) {
+    $translations = get_translations_for_domain( $domain );
+    $locale = array(
+            '' => array(
+                    'domain' => $domain,
+                    'lang'   => is_admin() ? get_user_locale() : get_locale(),
+            ),
+    );
+    if ( ! empty( $translations->headers['Plural-Forms'] ) ) {
+        $locale['']['plural_forms'] = $translations->headers['Plural-Forms'];
+    }
+    foreach ( $translations->entries as $msgid => $entry ) {
+        $locale[ $msgid ] = $entry->translations;
+    }
+    
+    return $locale;
+}
 
 
 // add script on frontend
