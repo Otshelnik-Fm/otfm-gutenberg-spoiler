@@ -1,17 +1,17 @@
-=== OtFm Gutenberg Spoiler ===
+=== OtFm Gutenberg Spoiler - spoiler or FAQ block ===
 Author URI: https://otshelnik-fm.ru
 Plugin URI: https://otshelnik-fm.ru/?p=5131
 Donate link: https://money.yandex.ru/to/41001526199072
 Contributors: otshelnik-fm
-Tags: gutenberg, spoiler, block-editor, blocks, gutenberg blocks
+Tags: gutenberg, spoiler, frequently asked questions, blocks, gutenberg blocks
 Requires at least: 5.0.0
-Tested up to: 5.0.0
+Tested up to: 5.0.3
 Requires PHP: 5.6.36
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-The plugin provides in the block editor 2 types of spoilers
+The plugin provides in the block editor 2 types of spoilers. Need FAQ or Spoiler?
 
 
 == Description ==
@@ -30,6 +30,8 @@ Between them, you insert any block (or several block's) with content that you wa
 
 In the frontend, the spoiler (accordion) opens with animation.
 In the editor you can choose the color design of the spoiler.
+
+Want to hide part of the publication? or make up the FAQ? - plugin is perfect for this
 
 Check out all beauty and power of the plugin by watching this video:
 [youtube https://www.youtube.com/watch?v=IrC1yVttMho]
@@ -58,13 +60,30 @@ Thanks to [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) for
 
 == Frequently Asked Questions ==
 
+= Accessibility support? Navigation by tab? =
+Yes!
+Navigation by "Tab" button: 
+The "Up arrow" key pressed - If the focused spoiler is open, you close it 
+The "Down arrow" key pressed - If the focused spoiler is closed, you open it 
+Either the "Enter" key or "Space bar" pressed - You toggle the focused spoiler. If it is open, close it; if it is closed, open it.
+The "End" key pressed - You move focus to the last spoiler on the page 
+The "Home" key pressed - You move focus to the first spoiler on the page 
+
+Support screen readers
+
+= How can I close a lot of blocks? =
+1. find "Box Spoiler Start" and paste (spoiler open)
+2. blocks, blocks, blocks...
+3. find "Box Spoiler End" and paste (this spoiler closed)
+
+
 = What WordPress themes work with OtFm Gutenberg Spoiler? =
 Any properly developed WordPress theme will work with OtFm Gutenberg Spoiler
 
 = How do I find the spoiler block? =
 1. Go to the block editor (add new post)
 2. Click "insert block"
-3. Search for a block "spoiler" or "otfm"
+3. Search for a block "spoiler" or "otfm" or "faq"
 
 = Is OtFm Gutenberg Spoiler free? =
 Yes! OtFm Gutenberg Spoiler core features are absolutely free.
@@ -74,6 +93,19 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2019-01-16 =  
+v1.3.0  
+* Accessibility support
+Navigation by "Tab" button: 
+The "Up arrow" key pressed - If the focused spoiler is open, you close it 
+The "Down arrow" key pressed - If the focused spoiler is closed, you open it 
+Either the "Enter" key or "Space bar" pressed - You toggle the focused spoiler. If it is open, close it; if it is closed, open it.
+The "End" key pressed - You move focus to the last spoiler on the page 
+The "Home" key pressed - You move focus to the first spoiler on the page 
+
+Support screen readers
+
+
 = 2018-12-07 =  
 v1.2.0  
 * Compatibility for WordPress v5.0.0  

@@ -3,7 +3,7 @@
 /*
 Plugin Name:    OtFm Gutenberg Spoiler
 Description:    Gutenberg Spoiler for WordPress
-Version:        1.2.0
+Version:        1.3.0
 Author:         Otshelnik-Fm (Wladimir Druzhaev)
 Author URI:     https://otshelnik-fm.ru/
 Text Domain:    ogs-spoiler
@@ -39,21 +39,21 @@ function ogs_script(){
 
     if( !function_exists('register_block_type') ) return;   // if wp 5.0
 
-        register_block_type( 'otfm/little-spoiler', array(
-            'editor_script' => 'ogs_script',
-            'editor_style'  => 'ogs_style',                 // only admin editor
-        ) );
+    register_block_type( 'otfm/little-spoiler', array(
+        'editor_script' => 'ogs_script',
+        'editor_style'  => 'ogs_style',                 // only admin editor
+    ) );
 
 
-        register_block_type( 'otfm/box-spoiler-start', array(
-            'editor_script' => 'ogs_script',
-            'editor_style'  => 'ogs_style',
-        ) );
+    register_block_type( 'otfm/box-spoiler-start', array(
+        'editor_script' => 'ogs_script',
+        'editor_style'  => 'ogs_style',
+    ) );
 
-        register_block_type( 'otfm/box-spoiler-end', array(
-            'editor_script' => 'ogs_script',
-            'editor_style'  => 'ogs_style',
-        ) );
+    register_block_type( 'otfm/box-spoiler-end', array(
+        'editor_script' => 'ogs_script',
+        'editor_style'  => 'ogs_style',
+    ) );
 
 // not work for me
 //        if ( function_exists( 'wp_set_script_translations' ) ) {              // wp 5.0
@@ -92,7 +92,7 @@ function ogs_get_jed_locale_data( $domain ) {
     foreach ( $translations->entries as $msgid => $entry ) {
         $locale[ $msgid ] = $entry->translations;
     }
-    
+
     return $locale;
 }
 
@@ -101,7 +101,7 @@ function ogs_get_jed_locale_data( $domain ) {
 function ogs_spoiler_script(){
     wp_enqueue_script(
             'otfm-guten-spoiler-js',
-            plugins_url('frontend/otfm-spoiler.js', __FILE__),
+            plugins_url('frontend/otfm-spoiler.min.js', __FILE__),
             array( 'jquery' ),
             '',
             true
@@ -114,7 +114,7 @@ add_action( 'wp_enqueue_scripts', 'ogs_spoiler_script' );
 function ogs_spoiler_style(){
     wp_enqueue_style(
             'otfm-guten-spoiler-css',
-            plugins_url('frontend/otfm-spoiler.css', __FILE__)
+            plugins_url('frontend/otfm-spoiler.min.css', __FILE__)
     );
 }
 add_action( 'wp_enqueue_scripts', 'ogs_spoiler_style' );
