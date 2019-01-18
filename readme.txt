@@ -7,7 +7,7 @@ Tags: gutenberg, spoiler, frequently asked questions, blocks, gutenberg blocks
 Requires at least: 5.0.0
 Tested up to: 5.0.3
 Requires PHP: 5.6.36
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -93,6 +93,11 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2019-01-18 =  
+v1.3.1  
+* Rename min.js & min.css files
+
+
 = 2019-01-16 =  
 v1.3.0  
 * Accessibility support

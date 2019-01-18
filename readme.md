@@ -83,6 +83,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+= 2019-01-18 =  
+v1.3.1  
+* Rename min.js & min.css files  
+
+
 = 2019-01-16 =  
 v1.3.0  
 * Accessibility support  
