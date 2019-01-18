@@ -84,6 +84,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 ## Changelog  
 = 2019-01-18 =  
+v1.3.2  
+* repository fix update  
+
+
+= 2019-01-18 =  
 v1.3.1  
 * Rename min.js & min.css files  
 
