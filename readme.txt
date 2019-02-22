@@ -5,9 +5,9 @@ Donate link: https://money.yandex.ru/to/41001526199072
 Contributors: otshelnik-fm
 Tags: gutenberg, spoiler, frequently asked questions, blocks, gutenberg blocks
 Requires at least: 5.0.0
-Tested up to: 5.0.3
+Tested up to: 5.1
 Requires PHP: 5.6.36
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -93,6 +93,11 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2019-02-22 =  
+v1.3.3  
+* Compatibility for WordPress v5.1  
+
+
 = 2019-01-18 =  
 v1.3.2  
 * repository fix update

@@ -83,6 +83,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+= 2019-02-22 =  
+v1.3.3  
+* Compatibility for WordPress v5.1  
+
+
 = 2019-01-18 =  
 v1.3.2  
 * repository fix update  
