@@ -4,10 +4,10 @@ Plugin URI: https://otshelnik-fm.ru/?p=5131
 Donate link: https://money.yandex.ru/to/41001526199072
 Contributors: otshelnik-fm
 Tags: gutenberg, spoiler, frequently asked questions, blocks, gutenberg blocks
-Requires at least: 5.0.0
-Tested up to: 5.1
+Requires at least: 5.1.0
+Tested up to: 5.1.1
 Requires PHP: 5.6.36
-Stable tag: 1.3.3
+Stable tag: 1.4.0
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,8 @@ Between them, you insert any block (or several block's) with content that you wa
 In the frontend, the spoiler (accordion) opens with animation.
 In the editor you can choose the color design of the spoiler.
 
+Ability to add new colors or replace a set of colors. See FAQ
+
 Want to hide part of the publication? or make up the FAQ? - plugin is perfect for this
 
 Check out all beauty and power of the plugin by watching this video:
@@ -45,7 +47,7 @@ Check out all beauty and power of the plugin by watching this video:
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 5.0
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 5.1
 
 
 = Translation =
@@ -77,6 +79,46 @@ Support screen readers
 3. find "Box Spoiler End" and paste (this spoiler closed)
 
 
+= How can I add my own color? =
+Add this snippet to your file functions.php:
+
+```// add new colors to spoiler
+function otfmgs_add_new_colors($colors){
+    $colors[]= array( 'color' => '#bd4747', 'name' => 'my_brown' );
+    $colors[]= array( 'color' => '#32dd94', 'name' => 'my_green' );
+    //... etc
+    
+    return $colors;
+}
+add_filter('otfmgs_colors','otfmgs_add_new_colors');```
+
+where: #bd4747 - new hex color
+
+result: https://yadi.sk/i/223x_1-S3e_H1w
+
+(available from plugin version 1.4.0)
+
+
+= How to replace colors with your own set? =
+Add this snippet to your file functions.php:
+
+```// add my color palette to spoiler
+function otfmgs_add_my_color_pallete($colors){
+    $colors['new'][]= array( 'color' => '#bd4747', 'name' => 'my_brown' );
+    $colors['new'][]= array( 'color' => '#32dd94', 'name' => 'my_green' );
+    //... etc
+    
+    return $colors;
+}
+add_filter('otfmgs_colors','otfmgs_add_my_color_pallete');```
+
+where: #bd4747 - new hex color
+
+result: https://yadi.sk/i/Fv7BaxRLkjj_SA
+
+(available from plugin version 1.4.0)
+
+
 = What WordPress themes work with OtFm Gutenberg Spoiler? =
 Any properly developed WordPress theme will work with OtFm Gutenberg Spoiler
 
@@ -93,6 +135,11 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
+= 2019-04-11 =  
+v1.4.0  
+* new filter: `otfmgs_colors` - ability to add new colors or replace a set of colors. See FAQ
+
+
 = 2019-02-22 =  
 v1.3.3  
 * Compatibility for WordPress v5.1  

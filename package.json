@@ -4,6 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
+    "@wordpress/hooks": "^2.2.0",
     "webpack": "^4.17.1"
   },
   "devDependencies": {
