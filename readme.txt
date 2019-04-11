@@ -82,7 +82,7 @@ Support screen readers
 = How can I add my own color? =
 Add this snippet to your file functions.php:
 
-```// add new colors to spoiler
+<code>// add new colors to spoiler
 function otfmgs_add_new_colors($colors){
     $colors[]= array( 'color' => '#bd4747', 'name' => 'my_brown' );
     $colors[]= array( 'color' => '#32dd94', 'name' => 'my_green' );
@@ -90,7 +90,7 @@ function otfmgs_add_new_colors($colors){
     
     return $colors;
 }
-add_filter('otfmgs_colors','otfmgs_add_new_colors');```
+add_filter('otfmgs_colors','otfmgs_add_new_colors');</code>
 
 where: #bd4747 - new hex color
 
@@ -102,7 +102,7 @@ result: https://yadi.sk/i/223x_1-S3e_H1w
 = How to replace colors with your own set? =
 Add this snippet to your file functions.php:
 
-```// add my color palette to spoiler
+<code>// add my color palette to spoiler
 function otfmgs_add_my_color_pallete($colors){
     $colors['new'][]= array( 'color' => '#bd4747', 'name' => 'my_brown' );
     $colors['new'][]= array( 'color' => '#32dd94', 'name' => 'my_green' );
@@ -110,7 +110,7 @@ function otfmgs_add_my_color_pallete($colors){
     
     return $colors;
 }
-add_filter('otfmgs_colors','otfmgs_add_my_color_pallete');```
+add_filter('otfmgs_colors','otfmgs_add_my_color_pallete');</code>
 
 where: #bd4747 - new hex color
 
