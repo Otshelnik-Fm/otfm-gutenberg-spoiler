@@ -38,7 +38,7 @@ Download in official repository WordPress: [see link](https://wordpress.org/plug
 
 ## Requirements  
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 5.1  
+PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 5.3  
 
 
 ## Translation  
@@ -132,6 +132,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+= 2020-08-13 =  
+v1.5.0  
+* WordPress 5.5 supports added
+
+
 = 2019-04-11 =  
 v1.4.0  
 * new filter: `otfmgs_colors` - ability to add new colors or replace a set of colors. See FAQ  
