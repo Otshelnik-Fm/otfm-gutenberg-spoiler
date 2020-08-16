@@ -3,11 +3,9 @@
 /*
   Plugin Name:    OtFm Gutenberg Spoiler
   Description:    Gutenberg Spoiler for WordPress
-  Version:        1.5.0
+  Version:        1.5.1
   Author:         Otshelnik-Fm (Wladimir Druzhaev)
   Author URI:     https://otshelnik-fm.ru/
-  Text Domain:    ogs-spoiler
-  Domain Path:    /languages
  */
 
 /*
@@ -55,17 +53,17 @@ function ogs_script() {
 
 // not work for me
 //        if ( function_exists( 'wp_set_script_translations' ) ) {              // wp 5.0
-//            wp_set_script_translations( 'ogs_script', 'ogs-spoiler' );
+//            wp_set_script_translations( 'ogs_script', 'otfm-gutenberg-spoiler' );
 //        }
 //        else if ( function_exists( 'gutenberg_get_jed_locale_data' ) ) {      // guten
     // https://capitainewp.io/formations/wordpress-creer-blocs-gutenberg/i18n-internationaliser-javascript-gutenberg/
     // languages data
-    //$locale  = gutenberg_get_jed_locale_data( 'ogs-spoiler' );
+    //$locale  = gutenberg_get_jed_locale_data( 'otfm-gutenberg-spoiler' );
 
-    $locale = ogs_get_jed_locale_data( 'ogs-spoiler' );
+    $locale = ogs_get_jed_locale_data( 'otfm-gutenberg-spoiler' );
 
     // add in object JS wp.i18n.setLocaleData.
-    $content = 'wp.i18n.setLocaleData(' . json_encode( $locale ) . ', "ogs-spoiler" );';
+    $content = 'wp.i18n.setLocaleData(' . json_encode( $locale ) . ', "otfm-gutenberg-spoiler" );';
 
     // before script inline
     wp_script_add_data( 'ogs_script', 'data', $content );
@@ -206,7 +204,7 @@ function ogs_spoiler_style() {
 // languages
 add_action( 'plugins_loaded', 'ogs_textdomain' );
 function ogs_textdomain() {
-    load_plugin_textdomain( 'ogs-spoiler', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+    load_plugin_textdomain( 'otfm-gutenberg-spoiler', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 // critical css before jquery ready event

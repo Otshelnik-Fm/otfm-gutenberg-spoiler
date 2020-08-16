@@ -38,17 +38,19 @@ Download in official repository WordPress: [see link](https://wordpress.org/plug
 
 ## Requirements  
 
-PHP 5.6+, 7, 7.1 or 7.2 recommended for better performance, WordPress 5.3  
+PHP 5.6+, 7, 7.1, 7.2  or 7.3 recommended for better performance, WordPress 5.5 
 
 
 ## Translation  
 
-Available in English, Russian, Spanish, Swedish and more other languages in becoming.  
+Available in English, Russian, Spanish, Swedish, Dutch, Japanese and more other languages in becoming.
 
 
 ## Acknowledgements  
-Thanks to [Nilo Velez](https://profiles.wordpress.org/nilovelez/) for Spanish translation approval.  
-Thanks to [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) for Swedish translation approval.  
+Thanks to [Nilo Velez](https://profiles.wordpress.org/nilovelez/) for Spanish (Spain) translation approval.
+Thanks to [Yordan Soares](https://profiles.wordpress.org/yordansoares/) for Spanish (Venezuela) translation.
+Thanks to [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) for Swedish translation approval.
+Thanks to [Peter Smits](https://profiles.wordpress.org/psmits1567/) for Dutch translation.
 
 
 ## Frequently Asked Questions  
@@ -132,6 +134,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+= 2020-08-16 =  
+v1.5.1  
+* Change Text Domain to slug plugin
+
+
 = 2020-08-13 =  
 v1.5.0  
 * WordPress 5.5 supports added
