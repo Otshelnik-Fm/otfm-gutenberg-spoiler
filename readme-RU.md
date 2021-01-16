@@ -37,17 +37,23 @@ Box spoiler - состоит из 2 блоков:
 
 ## Требования  
 
-PHP 5.6+, 7, 7.1 или 7.2 рекомендованы, WordPress версии не ниже 5.0  
+PHP 5.6+, 7, 7.1, 7.2 или 7.3 рекомендованы, WordPress версии не ниже 5.0  
 
 
 ## Переводы  
 
-Доступен на английском, русском, испанском, шведском и другие языки (требуется поддержка сообщестива)
+Доступен на английском, русском, испанском, шведском, голландском, японском, французском, итальянском, норвежском, португальском и других языках (требуется поддержка сообщестива)
 
 
 ## Благодарности  
 Спасибо [Nilo Velez](https://profiles.wordpress.org/nilovelez/) за перевод на испанский.  
-Спасибо [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) за перевод на шведский.    
+Спасибо [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) за перевод на шведский.  
+Спасибо [Peter Smits](https://profiles.wordpress.org/psmits1567/) за перевод на голландский.  
+Спасибо [miccweb](https://profiles.wordpress.org/miccweb/) за перевод на японский.  
+Спасибо [FX Bénard](https://profiles.wordpress.org/fxbenard/) за перевод на французский.  
+Спасибо [Luisa Ravelli](https://profiles.wordpress.org/darkavenger/) и [aliceorru](https://profiles.wordpress.org/aliceorru/) за перевод на итальянский.  
+Спасибо [Eivind](https://profiles.wordpress.org/meinmycell/) за перевод на норвежский.  
+Спасибо [Pedro Mendonça](https://profiles.wordpress.org/pedromendonca/) за перевод на португальский.  
 
 
 ## FAQ  
@@ -129,6 +135,21 @@ add_filter('otfmgs_colors','otfmgs_add_my_color_pallete');
 
 
 ## Changelog  
+= 2021-01-16 =  
+v1.5.2  
+* Поддержка WordPress 5.6  
+
+
+= 2020-08-16 =  
+v1.5.1  
+* Сменил Text Domain на slug плагина  
+
+
+= 2020-08-13 =  
+v1.5.0  
+* Поддержка WordPress 5.5  
+
+
 = 2019-04-11 =  
 v1.4.0  
 * новый фильтр: `otfmgs_colors` - Позволяет добавить свой цвет или поменять палитру своим набором. Смотри FAQ  
