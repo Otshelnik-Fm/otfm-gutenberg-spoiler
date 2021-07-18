@@ -38,12 +38,12 @@ Download in official repository WordPress: [see link](https://wordpress.org/plug
 
 ## Requirements  
 
-PHP 5.6+, 7, 7.1, 7.2 or 7.3 recommended for better performance, WordPress 5.6 
+PHP 5.6+, 7, 7.1, 7.2 or 7.4 recommended for better performance, WordPress 5.8  
 
 
 ## Translation  
 
-Available in English, Russian, Spanish, Swedish, Dutch, Japanese, French, Italian, Norwegian, Portuguese and more other languages in becoming.  
+Available in English, Russian, Ukrainian, Spanish, German, Swedish, Dutch, Japanese, French, Italian, Norwegian, Portuguese and more other languages in becoming.  
 
 
 ## Acknowledgements  
@@ -56,6 +56,8 @@ Thanks to [FX Bénard](https://profiles.wordpress.org/fxbenard/) for French tran
 Thanks to [Luisa Ravelli](https://profiles.wordpress.org/darkavenger/) and [aliceorru](https://profiles.wordpress.org/aliceorru/) for Italian translation approval.  
 Thanks to [Eivind](https://profiles.wordpress.org/meinmycell/) for Norwegian translation approval.  
 Thanks to [Pedro Mendonça](https://profiles.wordpress.org/pedromendonca/) for Portuguese translation approval.  
+Thanks to [Sergey Kovalets](https://profiles.wordpress.org/sergeykovalets/) for Ukrainian translation.  
+Thanks to [Jens Ratzel](https://profiles.wordpress.org/jensratzel/) for German translation.  
 
 
 ## Frequently Asked Questions  
@@ -139,6 +141,11 @@ Write me: Otshelnik-Fm@yandex.ru
 
 
 ## Changelog  
+= 2021-07-18 =  
+v1.5.3  
+* WordPress 5.8 supports added  
+
+
 = 2021-01-16 =  
 v1.5.2  
 * WordPress 5.6 supports added  

@@ -5,9 +5,9 @@ Donate link: https://money.yandex.ru/to/41001526199072
 Contributors: otshelnik-fm
 Tags: gutenberg, spoiler, frequently asked questions, blocks, gutenberg blocks
 Requires at least: 5.3.0
-Tested up to: 5.6
-Requires PHP: 5.6.36
-Stable tag: 1.5.2
+Tested up to: 5.8
+Requires PHP: 7.3
+Stable tag: 1.5.3
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,12 +47,12 @@ Check out all beauty and power of the plugin by watching this video:
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1, 7.2 or 7.3 recommended for better performance, WordPress 5.6
+PHP 5.6+, 7, 7.1, 7.2 or 7.4 recommended for better performance, WordPress 5.8
 
 
 = Translation =
 
-Available in English, Russian, Spanish, Swedish, Dutch, Japanese, French, Italian, Norwegian, Portuguese and more other languages in becoming.
+Available in English, Russian, Ukrainian, Spanish, German, Swedish, Dutch, Japanese, French, Italian, Norwegian, Portuguese and more other languages in becoming.
 
 
 = Acknowledgements =
@@ -65,6 +65,8 @@ Thanks to [FX Bénard](https://profiles.wordpress.org/fxbenard/) for French tran
 Thanks to [Luisa Ravelli](https://profiles.wordpress.org/darkavenger/) and [aliceorru](https://profiles.wordpress.org/aliceorru/) for Italian translation approval.
 Thanks to [Eivind](https://profiles.wordpress.org/meinmycell/) for Norwegian translation approval.
 Thanks to [Pedro Mendonça](https://profiles.wordpress.org/pedromendonca/) for Portuguese translation approval.
+Thanks to [Sergey Kovalets](https://profiles.wordpress.org/sergeykovalets/) for Ukrainian translation.
+Thanks to [Jens Ratzel](https://profiles.wordpress.org/jensratzel/) for German translation.
 
 
 == Frequently Asked Questions ==
@@ -142,123 +144,7 @@ Write me Otshelnik-Fm@yandex.ru
 
 
 == Changelog ==
-= 2021-01-16 =  
-v1.5.2  
-* WordPress 5.6 supports added
-
-
-= 2020-08-16 =  
-v1.5.1  
-* Change Text Domain to slug plugin
-
-
-= 2020-08-13 =  
-v1.5.0  
-* WordPress 5.5 supports added
-
-
-= 2019-04-11 =  
-v1.4.0  
-* new filter: `otfmgs_colors` - ability to add new colors or replace a set of colors. See FAQ
-
-
-= 2019-02-22 =  
-v1.3.3  
-* Compatibility for WordPress v5.1  
-
-
-= 2019-01-18 =  
-v1.3.2  
-* repository fix update
-
-
-= 2019-01-18 =  
-v1.3.1  
-* Rename min.js & min.css files
-
-
-= 2019-01-16 =  
-v1.3.0  
-* Accessibility support
-Navigation by "Tab" button: 
-The "Up arrow" key pressed - If the focused spoiler is open, you close it 
-The "Down arrow" key pressed - If the focused spoiler is closed, you open it 
-Either the "Enter" key or "Space bar" pressed - You toggle the focused spoiler. If it is open, close it; if it is closed, open it.
-The "End" key pressed - You move focus to the last spoiler on the page 
-The "Home" key pressed - You move focus to the first spoiler on the page 
-
-Support screen readers
-
-
-= 2018-12-07 =  
-v1.2.0  
-* Compatibility for WordPress v5.0.0  
-
-
-= 2018-11-30 =  
-v1.1.1  
-* Compatibility for Gutenberg v4.6.0  
-
-
-= 2018-11-30 =  
-v1.1.0  
-* Compatibility for Gutenberg v4.5.1  
-
-
-= 2018-11-17 =  
-v1.0.9  
-* Compatibility for Gutenberg v4.4.0  
-
-
-= 2018-11-15 =  
-v1.0.8  
-* Compatibility for Gutenberg v4.3.0  
-
-
-= 2018-11-08 =  
-v1.0.7  
-* Compatibility for Gutenberg v4.2.0  
-
-
-= 2018-10-26 =  
-v1.0.6  
-* fix spoiler bug if isset cover block  
-* Compatibility for Gutenberg v4.1.1  
-
-
-= 2018-10-25 =
-v1.0.5  
-* Compatibility for Gutenberg v4.1.0  
-* Small css-fix for admin editor  
-
-
-= 2018-10-06 =
-v1.0.4  
-* Compatibility for Gutenberg 3.9.0  
-* Fix content spoiler on apple safari
-
-
-= 2018-09-20 =
-v1.0.3  
-* Support for Gutenberg 3.8.0  
-* Removed lines that do not need to be translated (proper names)  
-* Added hints to the translation file (for translate.wordpress.org)  
-
-
-= 2018-09-12 =
-v1.0.2    
-* add php file only for service translate.wordpress.org
-
-
-= 2018-09-12 =
-v1.0.1    
-* Small css fix
-
-
-= 2018-09-08 =
-v1.0.0    
-* Release
-
+[Full Changelog](https://github.com/Otshelnik-Fm/otfm-gutenberg-spoiler#changelog)
 
 
 == Upgrade Notice ==
