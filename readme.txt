@@ -4,10 +4,10 @@ Plugin URI: https://otshelnik-fm.ru/?p=5131
 Donate link: https://money.yandex.ru/to/41001526199072
 Contributors: otshelnik-fm
 Tags: gutenberg, spoiler, frequently asked questions, blocks, gutenberg blocks
-Requires at least: 5.3.0
-Tested up to: 5.8
-Requires PHP: 7.3
-Stable tag: 1.5.3
+Requires at least: 6.1.0
+Tested up to: 6.1.1
+Requires PHP: 8.0
+Stable tag: 1.5.4
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,12 +47,12 @@ Check out all beauty and power of the plugin by watching this video:
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1, 7.2 or 7.4 recommended for better performance, WordPress 5.8
+PHP 7.4, 8.0+ recommended for better performance, WordPress 6.1
 
 
 = Translation =
 
-Available in English, Russian, Ukrainian, Spanish, German, Swedish, Dutch, Japanese, French, Italian, Norwegian, Portuguese and more other languages in becoming.
+Available in English, Russian, Ukrainian, Spanish, German, Swedish, Dutch, Japanese, French, Italian, Norwegian, Portuguese, Chinese and more other languages in becoming.
 
 
 = Acknowledgements =
@@ -60,13 +60,15 @@ Thanks to [Nilo Velez](https://profiles.wordpress.org/nilovelez/) for Spanish (S
 Thanks to [Yordan Soares](https://profiles.wordpress.org/yordansoares/) for Spanish (Venezuela) translation.
 Thanks to [Tor-Bjorn Fjellner](https://profiles.wordpress.org/tobifjellner/) for Swedish translation approval.
 Thanks to [Peter Smits](https://profiles.wordpress.org/psmits1567/) for Dutch translation approval.
-Thanks to [miccweb](https://profiles.wordpress.org/miccweb/) for Japanese translation approval.  
-Thanks to [FX Bénard](https://profiles.wordpress.org/fxbenard/) for French translation approval.
+Thanks to [miccweb](https://profiles.wordpress.org/miccweb/) for Japanese translation approval.
+Thanks to [FX Bénard](https://profiles.wordpress.org/fxbenard/) for French (France) translation approval.
 Thanks to [Luisa Ravelli](https://profiles.wordpress.org/darkavenger/) and [aliceorru](https://profiles.wordpress.org/aliceorru/) for Italian translation approval.
-Thanks to [Eivind](https://profiles.wordpress.org/meinmycell/) for Norwegian translation approval.
-Thanks to [Pedro Mendonça](https://profiles.wordpress.org/pedromendonca/) for Portuguese translation approval.
+Thanks to [Eivind](https://profiles.wordpress.org/meinmycell/) for Norwegian (Nynorsk) translation approval.
+Thanks to [Pedro Mendonça](https://profiles.wordpress.org/pedromendonca/) for Portuguese (Portugal) translation approval.
 Thanks to [Sergey Kovalets](https://profiles.wordpress.org/sergeykovalets/) for Ukrainian translation.
 Thanks to [Jens Ratzel](https://profiles.wordpress.org/jensratzel/) for German translation.
+Thanks to [Alex Lion](https://profiles.wordpress.org/alexclassroom/) for Chinese (Taiwan) translation.
+Thanks to [Pieterjan Deneys](https://profiles.wordpress.org/nekojonez/) for Dutch (Belgium) translation.
 
 
 == Frequently Asked Questions ==
